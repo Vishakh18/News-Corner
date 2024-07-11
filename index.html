@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Corner</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body
+    class=" bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-sky-600 via-blue-600 to-purple-600">
+
+    <nav class="bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-purple-300 via-sky-300 to-blue-300  sticky "
+        id="top">
+        <div class="main-nav md:w-fill flex flex-row md:space-x-10 space-x-5 p-3  ">
+            <a href="#" onclick="reload()" class="company-logo  ">
+                <img src="Screenshot 2024-07-09 112419.png" alt="company logo" class="h-10 w-14 md:ml-10">
+            </a>
+            <div class="nav-links flex md:space-x-10">
+                <ul class="md:flex md:space-x-5 md:ml-5 mt-1 hidden text-lg font-semibold ">
+                    <li class="hover:underline nav-item hover:cursor-pointer" id="ipl"
+                        onclick="onNavItemClick('cricket')">Cricket</li>
+                    <li class="hover:underline nav-item hover:cursor-pointer" id="finance"
+                        onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover:underline nav-item hover:cursor-pointer" id="politics"
+                        onclick="onNavItemClick('politics')">Politics
+                    </li>
+                    <li class="hover:underline nav-item  hover:cursor-pointer" id="entertainment"
+                        onclick="onNavItemClick('entertainment')">
+                        Entertainment
+                    </li>
+
+                </ul>
+                <div class="space-x-6 flex absolute flex-row justify-end right-4">
+                    <div class="search-bar flex space-x-4 md:order-3 order-2  ">
+                        <input id="search-text" type="text" class="news-input border-black border-2 rounded-lg md:"
+                            placeholder="e.g. Science">
+                        <button id="search-button"
+                            class="search-button bg-blue-500 text-white px-1 py-2 rounded-lg ">Search
+                        </button>
+
+                    </div>
+                    <div class="tham tham-e-squeeze tham-w-6 md:hidden  mt-2  order-3" id="tham">
+                        <div class="tham-box">
+                            <div class="tham-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+    <div class="md:hidden bg-green-200 hidden" id="nav">
+        <ul class="flex flex-row space-x-3 justify-center content-center">
+            <li class="hover:underline nav-item hover:cursor-pointer" id="ipl" onclick="onNavItemClick('cricket')">
+                Cricket</li>
+            <li class="hover:underline nav-item hover:cursor-pointer" id="finance"
+                onclick="onNavItemClick('technology')">Technology
+            </li>
+            <li class="hover:underline nav-item hover:cursor-pointer" id="politics"
+                onclick="onNavItemClick('politics')">Politics
+            </li>
+            <li class="hover:underline nav-item  hover:cursor-pointer" id="entertainment"
+                onclick="onNavItemClick('entertainment')">
+                Entertainment
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="cards-container grid md:grid-cols-3  grid-cols-1  space-x-4 mr-3 " id="cards-container">
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="flex justify-center items-center mt-9 ml-4 ">
+            <div
+                class="md:h-[30rem] md:w-[25rem] h-auto  border-gray-500 border-[1px] bg-cover rounded-lg  text-left transition ease-in-out delay-150 hover:translate-x-2 hover:scale-125 duration-300 bg-green-50">
+                <div class="card space-y-3">
+                    <div class="card-header h-auto w-auto">
+                        <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img"
+                            class="rounded-lg h-52 w-full">
+                    </div>
+                    <div class="card-content ml-1 space-y-2">
+                        <h3 id="news-title" class="text-left text-xl font-bold">This is the Title</h3>
+                        <h6 class="news-source text-lg font-medium" id="news-source">End Gadget 26/08/2023</h6>
+                        <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Recusandae
+                            saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+    <div id="tp" class=" flex flex-row-reverse mr-2 sticky bottom-3  z-50  ">
+        <div
+            class="flex flex-row bg-[#d9d9d9] h-9 w-32 items-center space-x-3 hover:bg-slate-50 hover:shadow-black  rounded-full">
+            <img class="h-4 w-4 ml-[9.5px]" src="up-arrow.png" alt="">
+            <button><a href="#top">Back to Top</a></button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
