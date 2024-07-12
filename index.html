@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Corner</title>
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -73,14 +76,14 @@
     </div>
 
     <main>
-        <div class="cards-container grid md:grid-cols-3  grid-cols-1  space-x-4 mr-3 " id="cards-container">
+        <div class="cards-container grid md:grid-cols-3  grid-cols-1  space-x-4 mr-3  " id="cards-container">
         </div>
     </main>
 
     <template id="template-news-card">
-        <div class="flex justify-center items-center mt-9 ml-4 ">
-            <div
-                class="md:h-[30rem] md:w-[25rem] h-auto  border-gray-500 border-[1px] bg-cover rounded-lg  text-left transition ease-in-out delay-150 hover:translate-x-2 hover:scale-125 duration-300 bg-green-50">
+        <div class="flex justify-center items-center mt-9 ml-4 " data-aos="zoom-in-down">
+            <div class=" md:h-[30rem] md:w-[25rem] h-auto border-gray-500 border-[1px] bg-cover rounded-lg text-left
+            transition ease-in-out delay-150 hover:translate-x-2 hover:scale-125 duration-300 bg-green-50">
                 <div class="card space-y-3">
                     <div class="card-header h-auto w-auto">
                         <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img"
@@ -107,7 +110,12 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    </script>
+    <script>
+        AOS.init()
+    </script>
 </body>
 
 </html> 
